@@ -15,11 +15,11 @@ package com.hughie.leet.algorithm;
  * */
 public class P0002_AddTwoNumbers {
 
-    class ListNode {
-        int val;
-        ListNode next;
+    public static class ListNode {
+        public int val;
+        public ListNode next;
 
-        ListNode(int x) {
+        public ListNode(int x) {
             val = x;
         }
 
@@ -52,8 +52,8 @@ public class P0002_AddTwoNumbers {
      * [9], [9,9]
      * 个人解法
      * */
-    class Solution {
-        public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+//    public class Solution {
+        public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
             if (l2 == null) return l1;
 //        if (l1 == null) l1 = new ListNode(0);
 
@@ -83,7 +83,7 @@ public class P0002_AddTwoNumbers {
          * 在这种情况下，我们会将当前位的数值设置为 22，并将进位 carry = 1carry=1 带入下一次迭代。
          * 进位 carrycarry 必定是 00 或 11，这是因为两个数字相加（考虑到进位）可能出现的最大和为 9 + 9 + 1 = 199+9+1=19。
          * */
-        public ListNode f1_addTwoNumbers(ListNode l1, ListNode l2) {
+        public static ListNode f1_addTwoNumbers(ListNode l1, ListNode l2) {
             ListNode dummyHead = new ListNode(0);
             ListNode p = l1, q = l2, curr = dummyHead;
             int carry = 0;
@@ -102,5 +102,5 @@ public class P0002_AddTwoNumbers {
             }
             return dummyHead.next;
         }
-    }
+//    }
 }
